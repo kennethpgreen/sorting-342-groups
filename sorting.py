@@ -72,18 +72,11 @@ def match_groups(groups, num_students):
 	category_max = 2 * ((num_students / 2) // 7) 
 	category_size = {}
 	all_pairs = []
-	last_group_size = len(groups)
-	count = 0
 	while(len(groups) > 1):
-		if len(groups) == last_group_size:
-			count +=1
-			if count >= 10:
-				raise NotImplementedError('run again - error but not handled error')
-		else:
-			count = 0
-			last_group_size = len(groups)
 		start = groups[0]
 		first_pref = start.pref1
+		if not first_pref:
+			raise NotImplementedError('try raising the category max - group cannot be placed in preferable group')
 		second = None
 		for i in range(1, len(groups)):
 			if groups[i].pref1 == first_pref:
