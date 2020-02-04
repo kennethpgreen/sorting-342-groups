@@ -83,9 +83,15 @@ def match_groups(groups, num_students):
 				second = groups[i]
 				break
 		if not second:
+			if not start.pref2:
+				raise NotImplementedError('rerun - cannot give a certain group one their preferences')
 			temp = start.pref1
 			start.pref1 = start.pref2
-			start.pref2 = temp
+			if start.pref3:
+				start.pref2 = start.pref3
+				start.pref3 = temp
+			else:
+				start.pref2 = temp
 			continue
 		pair = PairGroup(first_pref, start.first, start.second, second.first, second.second)
 		if not start.second and not second.second:
@@ -113,7 +119,7 @@ if __name__ == '__main__':
 	nets = process_names('nets.txt') #returns a list of net ids
 	pairs, groups = match_groups(class_data, len(nets))
 	if (len(groups) == 1):
-		print("Couldn't match one group - run again or match last group by yourself")
+		print("Couldn't match one group - run again or match last group by yourself (results in output.txt")
 		print("Net 1: ", groups[0].first)
 		print("Net 2: ", groups[0].second)
 		print("Pref 1: ", groups[0].pref1)
