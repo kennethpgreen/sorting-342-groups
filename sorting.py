@@ -69,7 +69,7 @@ def process_names(fileName):
 	return nets
 
 def match_groups(groups, num_students):
-	category_max = 2 * ((num_students / 2) // 8) 
+	category_max = 3 * ((num_students / 2) // 8) 
 	category_size = {}
 	all_pairs = []
 	while(len(groups) > 1):
