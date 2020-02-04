@@ -8,7 +8,7 @@ There are 3 files in the repo:
 - nets.txt
 
 To run the program, cd into the repo and run python3 sorting.py
-Continue to run the program until a "Done" message is displayed or until there is only one unmatched group. The algorithm will never work if it's not possible to pair all the groups or if it's impossible for a group to get one of their preferences.
+Continue to run the program until a "Done" message is displayed or until there is only one unmatched group. The algorithm will never work if it's not possible to pair all the groups or if it's impossible for a group to get one of their preferences. The best way to improve algorithm performance is allowing more people in each group. (see later for more detials about this).
 The algorithm will use the test data to start. 
 Replace the data in class.txt and nets.txt with the desired data to sort.
 
