@@ -32,8 +32,9 @@ Note: because we're only looking for this to sort the names once, the code is no
 2. Runtime error. This happens when a group can't be placed in one of their preferences (they're all full). This can be fixed by making the group max capacity larger.
 
 
-## Algorithm Features
+## Algorithm Features!
 The algorithm is random and does not give some students over others.
 It will only result in groups of 3 or 4. 
 It guarantees that people will be in 1 of their three preferences or the algorithm will result in a runtime error.
+
 
